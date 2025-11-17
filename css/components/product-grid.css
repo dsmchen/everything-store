@@ -1,4 +1,50 @@
+main {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 40px;
+}
+
 #product-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+article {
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid var(--gray-400);
+}
+
+article .image-container {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+article .image {
+  max-height: 100%;
+  margin-bottom: 10px;
+}
+
+article .text-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+article .price {
+  font-weight: bold;
+}
+
+article .title {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+article .category {
+  text-transform: capitalize;
 }
