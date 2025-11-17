@@ -1,4 +1,5 @@
 @import 'base/variables.css';
 @import 'base/typography.css';
 @import 'base/reset.css';
+@import 'components/header.css';
 @import 'components/product-grid.css';

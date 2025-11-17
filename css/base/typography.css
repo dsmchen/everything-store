@@ -18,4 +18,5 @@
 
 body {
   font-family: Inclusive Sans, Arial, Helvetica, sans-serif;
+  color: var(--gray-900);
 }
