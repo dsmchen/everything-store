@@ -1,3 +1,3 @@
-import { getProducts } from './services/api.js';
+import { displayProducts } from './components/product-grid.js';
 
-console.log(getProducts());
+displayProducts();
