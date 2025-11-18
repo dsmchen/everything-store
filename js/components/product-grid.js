@@ -17,6 +17,8 @@ export async function displayProducts() {
 
     productCard.setAttribute('data-title', product.title);
     productCard.setAttribute('data-desc', product.description);
+    productCard.setAttribute('data-price', product.price);
+    productCard.setAttribute('data-rating', product.rating.rate);
 
     productTitle.classList.add('title');
     productPrice.classList.add('price');
