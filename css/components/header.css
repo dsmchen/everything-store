@@ -3,4 +3,45 @@ header {
   max-width: 100%;
   margin: 0 auto;
   padding: 10px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+form {
+  position: relative;
+}
+
+form::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  content: '';
+  display: block;
+  background: url('../../assets/icons/search.svg') center no-repeat;
+  height: 20px;
+  width: 20px;
+}
+
+form input {
+  border-radius: 10px;
+  padding: 5px 10px 5px 40px;
+  border: 1px solid var(--gray-400);
+}
+
+form button {
+  border: 0;
+  padding: 0;
+  background: none;
 }
