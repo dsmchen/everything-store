@@ -22,26 +22,46 @@ article .image-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 article .image {
   max-height: 100%;
-  margin-bottom: 10px;
-}
-
-article .text-container {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-}
-
-article .price {
-  font-weight: bold;
 }
 
 article .title {
   font-size: 1rem;
   margin-bottom: 10px;
+}
+
+article .rating-container {
+  display: flex;
+  align-items: center;
+}
+
+article .rating-rate {
+  display: flex;
+}
+
+article .star {
+  content: '';
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+}
+
+article .star-fill {
+  background-image: url('../../assets/icons/star-fill.svg');
+}
+
+article .star-half {
+  background-image: url('../../assets/icons/star-half.svg');
+}
+
+article .star-line {
+  background-image: url('../../assets/icons/star-line.svg');
 }
 
 article .category {
