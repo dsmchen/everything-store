@@ -22,14 +22,50 @@
       </form>
     </header>
     <main>
-      <div id="sort-select-container">
-        <label for="sort-select">Sort By</label>
-        <select id="sort-select">
-          <option value="">Please choose an option</option>
-          <option value="price-low">Price Low to High</option>
-          <option value="price-high">Price High to Low</option>
-          <option value="rating">Top Rated</option>
-        </select>
+      <div id="select-range-container">
+        <div id="sort-select-container">
+          <label for="sort-select">Sort By</label>
+          <select id="sort-select">
+            <option value="">Choose an option</option>
+            <option value="price-low">Price Low to High</option>
+            <option value="price-high">Price High to Low</option>
+            <option value="rating">Top Rated</option>
+          </select>
+        </div>
+        <div id="price-range-container">
+          <div class="price-input">
+            <div class="field">
+              <span>Min</span>
+              <input type="number" class="input-min" value="0" />
+            </div>
+            <div class="separator">-</div>
+            <div class="field">
+              <span>Max</span>
+              <input type="number" class="input-max" value="1000" />
+            </div>
+          </div>
+          <div class="slider">
+            <div class="progress"></div>
+          </div>
+          <div class="range-input">
+            <input
+              type="range"
+              class="range-min"
+              min="0"
+              max="1000"
+              value="0"
+              step="10"
+            />
+            <input
+              type="range"
+              class="range-max"
+              min="0"
+              max="1000"
+              value="1000"
+              step="10"
+            />
+          </div>
+        </div>
       </div>
       <div id="product-grid"></div>
     </main>
