@@ -1,0 +1,10 @@
+#sort-select-container {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 30px;
+  gap: 10px;
+}
+
+#sort-select-container label {
+  font-weight: bold;
+}
