@@ -2,10 +2,14 @@ header {
   width: 1200px;
   max-width: 100%;
   margin: 0 auto;
-  padding: 10px 40px;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+h1 {
+  line-height: 1;
 }
 
 .visually-hidden {
@@ -44,4 +48,11 @@ form button {
   border: 0;
   padding: 0;
   background: none;
+}
+
+@media (min-width: 1280px) {
+  header {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
