@@ -15,6 +15,9 @@ export async function displayProducts() {
     const productRatingCount = document.createElement('span');
     const productRatingContainer = document.createElement('div');
 
+    productCard.setAttribute('data-title', product.title);
+    productCard.setAttribute('data-desc', product.description);
+
     productTitle.classList.add('title');
     productPrice.classList.add('price');
     productCategory.classList.add('category');

@@ -1,3 +1,7 @@
+import { search } from './components/header.js';
 import { displayProducts } from './components/product-grid.js';
 
-displayProducts();
+window.addEventListener('load', () => {
+  search();
+  displayProducts();
+});

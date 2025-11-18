@@ -11,6 +11,10 @@ main {
   gap: 20px;
 }
 
+.hidden {
+  display: none;
+}
+
 article {
   padding: 20px;
   border-radius: 10px;
