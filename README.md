@@ -13,3 +13,8 @@ Page that consumes the <https://fakestoreapi.com/> API and provides sorting, fil
 - Favicon: <https://favicon.io/>
 - Font: [Inclusive Sans](https://fonts.google.com/specimen/Inclusive+Sans)
 - CSS reset: [Josh's Custom CSS Reset](https://www.joshwcomeau.com/css/custom-css-reset/)
+- Colours: [Material Design](https://m2.material.io/design/color/the-color-system.html)
+- Icons: [Remix Icon](https://remixicon.com/)
+- Search bar accessibility:
+  - <http://web-accessibility.carnegiemuseums.org/code/search/>
+  - <https://css-tricks.com/inclusively-hidden/>
