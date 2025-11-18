@@ -18,3 +18,4 @@ Page that consumes the <https://fakestoreapi.com/> API and provides sorting, fil
 - Search bar accessibility:
   - <http://web-accessibility.carnegiemuseums.org/code/search/>
   - <https://css-tricks.com/inclusively-hidden/>
+- Price range: <https://codepen.io/danishlaeeq/pen/OJvGmaY>
