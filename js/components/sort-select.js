@@ -1,4 +1,4 @@
-export function sortSelect() {
+export function initSortSelect() {
   const sortSelect = document.getElementById('sort-select');
 
   function handleSelect() {

@@ -1,6 +1,6 @@
 import { displayProducts } from './product-grid.js';
 
-export function priceRange() {
+export function initPriceRange() {
   const rangeInput = document.querySelectorAll('.range-input input'),
     priceInput = document.querySelectorAll('.price-input input'),
     range = document.querySelector('.slider .progress');

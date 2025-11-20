@@ -1,4 +1,4 @@
-export function search() {
+export function initSearch() {
   const submitBtn = document.querySelector('form button');
 
   function handleSubmit(e) {
