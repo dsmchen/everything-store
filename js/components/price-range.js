@@ -54,12 +54,6 @@ export function priceRange() {
   async function filterByPriceRange() {
     const productGrid = document.getElementById('product-grid');
 
-    function removeAllChildNodes(parent) {
-      while (parent.firstChild) {
-        parent.removeChild(parent.firstChild);
-      }
-    }
-
     removeAllChildNodes(productGrid);
 
     const isDisplayed = await displayProducts();
@@ -68,17 +62,26 @@ export function priceRange() {
       const products = document.querySelectorAll('article');
       let minPrice = parseInt(priceInput[0].value),
         maxPrice = parseInt(priceInput[1].value);
-      let filteredProducts = Array.from(products).filter(
-        (product) =>
-          product.getAttribute('data-price') >= minPrice &&
-          product.getAttribute('data-price') <= maxPrice
+      let filteredProducts = Array.from(products).filter((product) =>
+        filterProduct(product, minPrice, maxPrice)
       );
 
       removeAllChildNodes(productGrid);
 
-      filteredProducts.forEach((product) => {
-        productGrid.appendChild(product);
-      });
+      filteredProducts.forEach((product) => productGrid.appendChild(product));
     }
+  }
+
+  function removeAllChildNodes(parent) {
+    while (parent.firstChild) {
+      parent.removeChild(parent.firstChild);
+    }
+  }
+
+  function filterProduct(product, minPrice, maxPrice) {
+    return (
+      product.getAttribute('data-price') >= minPrice &&
+      product.getAttribute('data-price') <= maxPrice
+    );
   }
 }
