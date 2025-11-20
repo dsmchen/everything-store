@@ -36,14 +36,29 @@
           <div class="price-input">
             <div class="field">
               <span>Min</span>
-              <input type="number" class="input-min" value="0" />
+              <input
+                type="number"
+                class="input-min"
+                value="0"
+                required
+                min="0"
+                max="900"
+              />
             </div>
             <div class="separator">-</div>
             <div class="field">
               <span>Max</span>
-              <input type="number" class="input-max" value="1000" />
+              <input
+                type="number"
+                class="input-max"
+                value="1000"
+                required
+                min="100"
+                max="1000"
+              />
             </div>
           </div>
+          <p id="price-range-error"></p>
           <div class="slider">
             <div class="progress"></div>
           </div>
@@ -68,6 +83,7 @@
         </div>
       </div>
       <div id="product-grid"></div>
+      <p id="product-grid-error"></p>
     </main>
   </body>
 </html>

@@ -11,7 +11,15 @@ export function initPriceRange() {
       let minPrice = parseInt(priceInput[0].value),
         maxPrice = parseInt(priceInput[1].value);
 
-      if (maxPrice - minPrice >= priceGap && maxPrice <= rangeInput[1].max) {
+      if (
+        priceInput[0].validity.valid &&
+        priceInput[1].validity.valid &&
+        maxPrice > minPrice &&
+        maxPrice - minPrice >= priceGap &&
+        maxPrice <= rangeInput[1].max
+      ) {
+        hideErrorMessage('price-range-error');
+
         if (e.target.className === 'input-min') {
           rangeInput[0].value = minPrice;
           range.style.left = (minPrice / rangeInput[0].max) * 100 + '%';
@@ -19,11 +27,24 @@ export function initPriceRange() {
           rangeInput[1].value = maxPrice;
           range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + '%';
         }
+      } else {
+        showErrorMessage('price-range-error', 'Invalid input.');
       }
     });
 
-    input.addEventListener('change', (e) => {
-      filterByPriceRange();
+    input.addEventListener('change', () => {
+      let minPrice = parseInt(priceInput[0].value),
+        maxPrice = parseInt(priceInput[1].value);
+
+      if (
+        priceInput[0].validity.valid &&
+        priceInput[1].validity.valid &&
+        maxPrice > minPrice &&
+        maxPrice - minPrice >= priceGap &&
+        maxPrice <= rangeInput[1].max
+      ) {
+        filterByPriceRange();
+      }
     });
   });
 
@@ -46,7 +67,8 @@ export function initPriceRange() {
       }
     });
 
-    input.addEventListener('change', (e) => {
+    input.addEventListener('change', () => {
+      hideErrorMessage('price-range-error');
       filterByPriceRange();
     });
   });
@@ -69,6 +91,15 @@ export function initPriceRange() {
       removeAllChildNodes(productGrid);
 
       filteredProducts.forEach((product) => productGrid.appendChild(product));
+
+      if (filteredProducts.length) {
+        hideErrorMessage('product-grid-error');
+      } else {
+        showErrorMessage(
+          'product-grid-error',
+          'Sorry, no results found. Please try again.'
+        );
+      }
     }
   }
 }
@@ -84,4 +115,14 @@ function filterProduct(product, minPrice, maxPrice) {
     product.getAttribute('data-price') >= minPrice &&
     product.getAttribute('data-price') <= maxPrice
   );
+}
+
+function showErrorMessage(id, message) {
+  const error = document.getElementById(id);
+  error.textContent = message;
+}
+
+function hideErrorMessage(id) {
+  const error = document.getElementById(id);
+  error.textContent = '';
 }

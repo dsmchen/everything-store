@@ -4,7 +4,6 @@
 }
 .price-input {
   display: flex;
-  margin-bottom: 15px;
 }
 .price-input .field {
   display: flex;
@@ -33,6 +32,7 @@ input[type='number']::-webkit-inner-spin-button {
   justify-content: center;
 }
 .slider {
+  margin-top: 15px;
   height: 5px;
   position: relative;
   background: var(--gray-400);
@@ -75,6 +75,10 @@ input[type='range']::-moz-range-thumb {
   background: var(--gray-900);
   pointer-events: auto;
   -moz-appearance: none;
+}
+
+#price-range-error {
+  text-align: center;
 }
 
 @media (min-width: 769px) {
