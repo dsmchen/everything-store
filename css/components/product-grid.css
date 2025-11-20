@@ -2,13 +2,13 @@ main {
   width: 1200px;
   max-width: 100%;
   margin: 0 auto;
-  padding: 20px;
+  padding: 10px;
 }
 
 #product-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 10px;
 }
 
 .hidden {
@@ -16,13 +16,13 @@ main {
 }
 
 article {
-  padding: 20px;
+  padding: 10px;
   border-radius: 10px;
   border: 1px solid var(--gray-400);
 }
 
 article .image-container {
-  height: 200px;
+  height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,8 +73,21 @@ article .category {
 }
 
 @media (min-width: 769px) {
+  main {
+    padding: 20px;
+  }
+
   #product-grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  article {
+    padding: 20px;
+  }
+
+  article .image-container {
+    height: 200px;
   }
 }
 

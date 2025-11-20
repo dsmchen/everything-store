@@ -1,7 +1,7 @@
 #select-range-container {
   margin-bottom: 30px;
   display: flex;
-  gap: 20px;
+  gap: 10px;
   justify-content: space-between;
   align-items: end;
 }
