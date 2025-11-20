@@ -71,17 +71,17 @@ export function initPriceRange() {
       filteredProducts.forEach((product) => productGrid.appendChild(product));
     }
   }
+}
 
-  function removeAllChildNodes(parent) {
-    while (parent.firstChild) {
-      parent.removeChild(parent.firstChild);
-    }
+function removeAllChildNodes(parent) {
+  while (parent.firstChild) {
+    parent.removeChild(parent.firstChild);
   }
+}
 
-  function filterProduct(product, minPrice, maxPrice) {
-    return (
-      product.getAttribute('data-price') >= minPrice &&
-      product.getAttribute('data-price') <= maxPrice
-    );
-  }
+function filterProduct(product, minPrice, maxPrice) {
+  return (
+    product.getAttribute('data-price') >= minPrice &&
+    product.getAttribute('data-price') <= maxPrice
+  );
 }

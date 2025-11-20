@@ -11,16 +11,16 @@ export function initSearch() {
     Array.from(products).map((product) => showSearchResults(product, keywords));
   }
 
-  function showSearchResults(product, keywords) {
-    const title = product.getAttribute('data-title').toLowerCase();
-    const desc = product.getAttribute('data-desc').toLowerCase();
-
-    product.classList.remove('hidden');
-
-    if (!title.includes(keywords) && !desc.includes(keywords)) {
-      product.classList.add('hidden');
-    }
-  }
-
   submitBtn.addEventListener('click', handleSubmit);
+}
+
+function showSearchResults(product, keywords) {
+  const title = product.getAttribute('data-title').toLowerCase();
+  const desc = product.getAttribute('data-desc').toLowerCase();
+
+  product.classList.remove('hidden');
+
+  if (!title.includes(keywords) && !desc.includes(keywords)) {
+    product.classList.add('hidden');
+  }
 }

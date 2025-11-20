@@ -29,17 +29,17 @@ export function initSortSelect() {
     }
   }
 
-  function comparePriceLow(a, b) {
-    return a.getAttribute('data-price') - b.getAttribute('data-price');
-  }
-
-  function comparePriceHigh(a, b) {
-    return b.getAttribute('data-price') - a.getAttribute('data-price');
-  }
-
-  function compareRating(a, b) {
-    return b.getAttribute('data-rating') - a.getAttribute('data-rating');
-  }
-
   sortSelect.addEventListener('change', handleSelect);
+}
+
+function comparePriceLow(a, b) {
+  return a.getAttribute('data-price') - b.getAttribute('data-price');
+}
+
+function comparePriceHigh(a, b) {
+  return b.getAttribute('data-price') - a.getAttribute('data-price');
+}
+
+function compareRating(a, b) {
+  return b.getAttribute('data-rating') - a.getAttribute('data-rating');
 }
